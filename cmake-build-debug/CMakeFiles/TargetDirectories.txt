@@ -1,3 +1,0 @@
-C:/Users/muham/OneDrive/Desktop/uas-dasar-pemrograman/c/fauzul-ti-c/cmake-build-debug/CMakeFiles/fauzul_ti_c.dir
-C:/Users/muham/OneDrive/Desktop/uas-dasar-pemrograman/c/fauzul-ti-c/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/muham/OneDrive/Desktop/uas-dasar-pemrograman/c/fauzul-ti-c/cmake-build-debug/CMakeFiles/rebuild_cache.dir
