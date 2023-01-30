@@ -130,8 +130,8 @@ void ReadTicketDetails(Ticket detail) {
 
 int main() {
   int movieNumber, watchingDate, watchingDay, watchingMonth, movieTimeNumber, quantity, columnSeat;
-  string name;
   char rowSeat, repeat;
+  string name;
 
   name:
     cout << "================ Welcome to Cinema ================\n\n";
@@ -240,17 +240,17 @@ int main() {
       goto movie;
     }
 
+  system("cls");
+
+  ReadTicketDetails(ticket);
+
+  cout << "\nYou wanna buy another ticket? (y/t) : ";
+  cin >> repeat;
+
+  cin.get();
+
+  if (repeat == 'y') {
     system("cls");
-
-    ReadTicketDetails(ticket);
-
-    cout << "\nYou wanna buy another ticket? (y/t) : ";
-    cin >> repeat;
-
-    cin.get();
-
-    if (repeat == 'y') {
-      system("cls");
-      goto name;
-    }
+    goto name;
+  }
 }
