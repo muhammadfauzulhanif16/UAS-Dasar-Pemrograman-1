@@ -1,1 +1,0 @@
-CMakeLists.txt not found in C:\Users\muham\OneDrive\Desktop\uas-dasar-pemrograman\c\fauzul-ti-c Select CMakeLists.txt
