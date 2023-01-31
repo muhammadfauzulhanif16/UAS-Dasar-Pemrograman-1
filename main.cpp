@@ -10,12 +10,12 @@ struct Time{
 };
 
 struct Movie{
- string title,
-   duration,
-   rating;
- vector<string> time;
- vector<string> genre;
- int price;
+  string title,
+    duration,
+    rating;
+  vector<string> time;
+  vector<string> genre;
+  int price;
 };
 
 struct Seat{
@@ -55,7 +55,8 @@ vector<Movie> movies{
     {"Adventure", "Animation", "Comedy"},
     25000,
   },
-  {"The Invitation (2022)", "102 Menit", "PG-13",
+  {
+    "The Invitation (2022)", "102 Menit", "PG-13",
     {"7:30", "13:30", "16:30", "20:30"},
     {"Horror", "Thriller"},
     25000,
@@ -63,7 +64,7 @@ vector<Movie> movies{
 };
 
 vector<char> alphabets{
- 'A', 'B', 'C', 'D', 'E', 'F',
+  'A', 'B', 'C', 'D', 'E', 'F',
 };
 
 vector<vector<Seat>> seats;
@@ -71,35 +72,35 @@ vector<vector<Seat>> seats;
 Ticket ticket;
 
 void ReadMovieDetails(Movie detail) {
- cout << "==== Movie Details ====\n\n";
- cout << "Title\t\t:\t" << detail.title << "\n";
- cout << "Duration\t:\t" << detail.duration << "\n";
- cout << "Time\t\t:";
- for (int i = 0; i < detail.time.size(); i++) {
-   cout << (i == 0 ? "\t" : "\t\t\t") <<  i + 1 << ". " << detail.time[i] << "\n";
- }
+  cout << "==== Movie Details ====\n\n";
+  cout << "Title\t\t:\t" << detail.title << "\n";
+  cout << "Duration\t:\t" << detail.duration << "\n";
+  cout << "Time\t\t:";
+  for (int i = 0; i < detail.time.size(); i++) {
+    cout << (i == 0 ? "\t" : "\t\t\t") <<  i + 1 << ". " << detail.time[i] << "\n";
+  }
 
- cout << "Genre\t\t:";
- for (int i = 0; i < detail.genre.size(); i++) {
-   cout << (i == 0 ? "\t" : "\t\t\t") <<  i + 1 << ". " << detail.genre[i] << "\n";
- }
+  cout << "Genre\t\t:";
+  for (int i = 0; i < detail.genre.size(); i++) {
+    cout << (i == 0 ? "\t" : "\t\t\t") <<  i + 1 << ". " << detail.genre[i] << "\n";
+  }
 
- cout << "Rating\t\t:\t" << detail.rating << "\n";
- cout << "Price\t\t:\tRp " << detail.price << "\n\n";
+  cout << "Rating\t\t:\t" << detail.rating << "\n";
+  cout << "Price\t\t:\tRp " << detail.price << "\n\n";
 }
 
 void CreateSeats() {
- if (seats.size() == 0) {
-   for (char alphabet : alphabets) {
-     vector<Seat> row;
+  if (seats.size() == 0) {
+    for (char alphabet : alphabets) {
+      vector<Seat> row;
 
-     for (int i = 0; i < alphabets.size(); i++) {
-       row.push_back({alphabet, i + 1, true});
-     }
+      for (int i = 0; i < alphabets.size(); i++) {
+        row.push_back({alphabet, i + 1, true});
+      }
 
-     seats.push_back(row);
-   }
- }
+      seats.push_back(row);
+    }
+  }
 }
 
 void ReadSeats() {
@@ -178,11 +179,6 @@ int main() {
       system("cls");
       goto month;
     }
-    
-    cout << ticket.name << "\n";
-    cout << ticket.time.day << "\n";
-    cout << ticket.time.date << "\n";
-    cout << ticket.time.month << "\n";
 
     system("cls");
 
@@ -214,6 +210,8 @@ int main() {
       ticket.quantity = quantity;
 
       cout << "\n";
+
+      ticket.seats.clear();
 
       CreateSeats();
       ReadSeats();
